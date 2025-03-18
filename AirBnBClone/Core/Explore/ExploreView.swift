@@ -11,6 +11,8 @@ struct ExploreView: View {
     var body: some View {
         NavigationStack {
             ScrollView(.vertical) {
+                SearchAndFilterBar()
+                
                 LazyVStack(spacing: 25) {
                     ForEach(0...10, id: \.self) { image in
                         ListingItemView()
@@ -19,7 +21,7 @@ struct ExploreView: View {
                         
                     }
                 }
-                .padding(6)
+                .padding()
             }
         }
     }
